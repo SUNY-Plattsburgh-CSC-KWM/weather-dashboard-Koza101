@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather Dashboard</title>
+
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+
+<h1>Weather Dashboard</h1>
+<div class="coordinates">
+    <label>Latitude
+        <input placeholder="Input Latitude" type="number" id="lat" step="any" min="-90" max="90" value="44.6995" required>
+    </label>
+    <label>Longitude</label>
+        <input placeholder="Input Longitude" type="number" id="lon" step="any" min="-180" max="180" value="-73.4529" required>
+    </label>
+</div>
+
+<label>Units
+    <select id="unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select>
+</label>
+
+<div class="buttons">
+    <button id="btn-hs" type="button" >Historical</button>
+    <button id="btn-fc" type="button">Forecast</button>
+</div>
+
+<div id="forecast-cards" class="cards"></div>
+
+<pre id="output"></pre>
+
+<h2>Historical</h2>
+<div id="chart"></div>
+
+</body>
+</html>
